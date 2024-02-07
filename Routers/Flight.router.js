@@ -5,14 +5,12 @@ import { authMiddleware } from "../Middleware/auth.middleware.js";
 
 const router = express.Router();
 
-router.post("/setflight", createFlight);
+router.post("/setflight", createFlight); 
+
 router.post("/fligthSearch", fligthSearch);
 router.get("/getflight", flightlist);
 router.post("/userBooking", userBooking);
 router.post("/getBooking", getBooking);
-
-
-
 
 // log-reg routers
 
@@ -22,9 +20,4 @@ router.get('/getuser', authMiddleware, getUserById);
 router.post('/resetpassword', resetPassword);   
 router.post('/resetpasswordpage',resetPasswordpage);
 
-
-
-
-
-
-export default router;  
+export default router;
